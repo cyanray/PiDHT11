@@ -33,8 +33,8 @@ void DHT11::ReadData(unsigned long & temperture, unsigned long & humidity)
 		}
 		DHT_Data.set(i, t > 40);
 	}
-	temperture = bitset_range<39, 32>(DHT_Data).to_ulong() - 7;
-	humidity = bitset_range<23, 16>(DHT_Data).to_ulong() - 7;
+	humidity = bitset_range<39, 32>(DHT_Data).to_ulong() - 7;
+	temperture = bitset_range<23, 16>(DHT_Data).to_ulong() - 7;
 }
 
 DHT11::~DHT11()
